@@ -1,0 +1,176 @@
+/* MODERN BANKA TASARIMI */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5; /* Açık gri modern arka plan */
+  color: #333;
+}
+
+/* Giriş Ekranı Ortalaması */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #004e92, #000428); /* Koyu Mavi Degrade */
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+/* Form Elemanları */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #004e92;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 78, 146, 0.3);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #004e92;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #003366;
+  transform: translateY(-2px); /* Hafif yukarı kalkma efekti */
+}
+
+/* Dashboard (Ana Ekran) */
+.dashboard-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.logout-btn {
+  width: auto;
+  background: #ff4757;
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background: #ff6b81;
+}
+
+/* Hesap Kartı */
+.balance-card {
+  background: linear-gradient(135deg, #11998e, #38ef7d); /* Modern Yeşil */
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(17, 153, 142, 0.4);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.balance-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+.balance-amount {
+  font-size: 50px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+/* İki Kolonlu Yapı */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Sol taraf dar, sağ taraf geniş */
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  border-bottom: 2px solid #f0f2f5;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #004e92;
+}
+
+/* Tablo */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  color: #888;
+  font-weight: 400;
+  padding: 10px;
+  font-size: 14px;
+}
+
+td {
+  padding: 15px 10px;
+  border-bottom: 1px solid #f0f2f5;
+  font-size: 14px;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-in { background: #e6fffa; color: #00b894; }
+.badge-out { background: #fff0f1; color: #ff4757; }
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr; /* Mobilde alt alta geçsin */
+  }
+  .balance-amount { font-size: 36px; }
+}

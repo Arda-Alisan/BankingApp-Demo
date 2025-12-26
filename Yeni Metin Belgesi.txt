@@ -1,0 +1,52 @@
+backend =  WebApplication2 için         
+dotnet run                            http://localhost:5114/swagger/index.html
+
+
+
+frontend için
+     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser   // bu bende gerek yok artık ben bir kere denedim siz önce denemeyin çalışırsa sorun yok çalışmazsa bunu deneyin sorna npm start deyin
+
+
+npm start       http://localhost:3000/
+
+
+kullanıcılar
+arda                   123
+arda2                 123
+
+admin                 123
+
+
+
+
+admin kullanıcı şifrelerini de panelde görebilmeli
+
+1. İleri Tarihli / Düzenli Para Transferi (Standing Orders)
+Şu anki sistemde transfer anlık yapılıyor .
+
+Özellik: Kullanıcının "Her ayın 15'inde X hesabına 1000 TL gönder" diyebilmesi.
+
+Teknik Karşılık: Veritabanına ScheduledTransfers tablosu eklenmeli. Backend tarafında (ASP.NET Core) bir Background Service (Worker) çalışarak günü gelen transferleri otomatik işlemeli.
+
+2. Hesap Özeti İndirme (Export Statement as PDF/Excel) var ama filtreleme yok
+filtreleme tarihi gibi özellikler eklenebilir
+Özellik: "Son 1 ay", "Son 3 ay" gibi filtrelerle işlem geçmişini PDF olarak indirme butonu.
+
+
+
+
+5. Yönetici (Admin) Paneli var 
+Özellik: Banka çalışanının, şüpheli işlemleri (SecurityLog tablosundakileri) görebileceği, kullanıcıları engelleyebileceği (Ban/Block) bir panel.
+
+Teknik Karşılık: React tarafında /admin route'u oluşturulup sadece Role=Admin olanların girmesi sağlanır. Tablolarda veriler listelenir.
+
+Ödeme ve Fatura	Karekod (QR) ile Ödeme: Hem fiziksel POS'larda hem de e-ticarette karekod ile hızlı ödeme yapma yeteneği.
+Kayıtlı Faturalar ve Otomatik Ödeme: Elektrik, su, doğal gaz gibi faturaları kaydedip, otomatik ödeme talimatı verebilme.	Müşterinin fatura takibini kolaylaştırır ve zamanında ödeme garantisi sağlar.
+
+Kart Ayarları (Aç/Kapa): Kartın internet, ATM veya yurtdışı kullanımını anlık açıp kapatabilme.	Kart kaybolduğunda veya şüpheli işlemlerde anında güvenlik kontrolü sağlar.
+
+Yatırım ve Birikim	Otomatik Birikim Talimatı: Maaş yattığında otomatik olarak belirli bir miktarı (örn. 500 TL) ayrı bir birikim/yatırım hesabına aktarma.
+Hisse/Fon İşlemleri: Temel hisse senedi veya yatırım fonu alım-satım ekranları.	Uygulamayı bir yatırım platformuna dönüştürerek müşteri bağlılığını artırır.
+inansal Analiz	Harcama Kategorizasyonu: Geçmiş işlemleri (Gıda, Giyim, Kira, Eğlence) otomatik olarak etiketleyerek aylık harcama grafikleri sunma.
+Bütçeleme Araçları: Belirli bir kategori için (örn. "Eğlence") limit belirleme ve bu limite yaklaştığında uyarı verme.	Kullanıcıların kişisel bütçelerini kontrol etmelerine yardımcı olur.
+mevduat hesabı açabilmeli. Faiz Hesaplama Fonksiyonu	Gelişmiş faiz hesaplama mantığı (Net Getiri = Brüt - Stopaj) ve vade sonu getirisini hesaplayan yardımcı fonksiyon (servis) yazılmalı. faiz işletip para kazanabilmeli .

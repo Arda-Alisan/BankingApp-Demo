@@ -1,0 +1,16 @@
+# --- C# / Backend Gereksizleri ---
+**/bin/
+**/obj/
+**/.vs/
+**/.vscode/
+**/*.user
+**/appsettings.Development.json
+
+# --- React / Frontend Gereksizleri ---
+**/node_modules/
+**/build/
+**/dist/
+**/.env
+**/.env.local
+**/npm-debug.log*
+**/yarn-debug.log*

@@ -1,0 +1,15 @@
+# C# / .NET Gereksizleri
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+
+# React / Frontend Gereksizleri
+node_modules/
+build/
+.env.local
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
